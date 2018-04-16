@@ -1,0 +1,15 @@
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+int main(){
+	setlocale(LC_ALL, "rus");
+	char *buff = new char;
+	*buff = 50;
+	cin >> buff;
+	ofstream fout("text.txt");
+	fout << buff;
+	fout.close();
+delete buff;
+	return 0;
+}
