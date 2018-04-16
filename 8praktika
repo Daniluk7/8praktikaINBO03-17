@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+int main(){
+	int length;
+	char *buff = new char;
+	*buff = 50;
+
+	setlocale(LC_ALL, "rus");
+	ifstream fin("text.txt");
+while (!fin.eof())                       
+    {
+        if (fin.eof()) break;              
+        fin >>  buff;
+		cout << buff << endl;                  
+    }                                           
+fin.close();  
+delete buff; 
+}    
